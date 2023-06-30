@@ -285,13 +285,13 @@ app.post("/orderFoodItems", async (req, res) => {
 
 // api routes ends here
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
   
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
-    });
-  }  
+//     app.get('*', (req, res) => {
+//       res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
+//     });
+//   }  
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
