@@ -1,21 +1,20 @@
-const express = require("express")
-const mongoose = require("mongoose")
-const dotenv = require("dotenv")
-const path = require("path")
-const bodyParser = require("body-parser")
 
-dotenv.config();
-mongoose.set('strictQuery', false)
-
-const User = require('./models/User.js');
+const express=require("express")
+const mongoose=require("mongoose")
+const dotenv=require("dotenv")
+const path =require("path")
+const bodyparser=require("body-parser")
+const User=require("./models/User.js")
 const FoodItem = require('./models/FoodItem.js');
 const Table = require('./models/Table.js');
 const Order = require('./models/Order.js');
 
+dotenv.config();
+mongoose.set('strictQuery', false);
 const app = express();
 app.use(express.json());
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({extended:true}))
 
 const PORT = process.env.PORT || 5000;
 
