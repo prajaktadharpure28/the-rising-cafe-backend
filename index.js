@@ -1,24 +1,21 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import path from 'path';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-const __dirname = path.resolve();
+const express = require("express")
+const mongoose = require("mongoose")
+const dotenv = require("dotenv")
+const path = require("path")
+const bodyParser = require("body-parser")
 
 dotenv.config();
 mongoose.set('strictQuery', false);
 
-import User from './models/User.js';
-import FoodItem from './models/FoodItem.js';
-import Table from './models/Table.js';
-import Order from './models/Order.js';
+const User = require('./models/User.js');
+const FoodItem = require('./models/FoodItem.js');
+const Table = require('./models/Table.js');
+const Order = require('./models/Order.js');
 
 const app = express();
 app.use(express.json());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
