@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import path from 'path';
 import cors from 'cors';
+import bodyParser from 'body-parser';
 const __dirname = path.resolve();
 
 dotenv.config();
@@ -15,7 +16,8 @@ import Order from './models/Order.js';
 
 const app = express();
 app.use(express.json());
-
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors(
     {
         origin: ['https://rising-sun-cafe.onrender.com/']
