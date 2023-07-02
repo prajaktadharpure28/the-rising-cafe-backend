@@ -1,5 +1,5 @@
-import { Schema, model } from "mongoose";
-
+const mongoose=require("mongoose")
+const {Schema,model} =mongoose
 const foodItemSchema = new Schema({
     title: String,
     description: String,
@@ -9,4 +9,4 @@ const foodItemSchema = new Schema({
 });
 
 const FoodItem = model("FoodItem", foodItemSchema);
-export default FoodItem;
+module.exports=FoodItem
