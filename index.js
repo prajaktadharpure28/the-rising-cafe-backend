@@ -18,11 +18,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors(
-    {
-        origin: ['https://rising-sun-cafe.onrender.com/']
-    }
-));
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
