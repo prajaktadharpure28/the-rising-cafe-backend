@@ -29,9 +29,10 @@
 
 // export default Table;
 
-import mongoose, { Schema } from 'mongoose';
+const mongoose = require('mongoose');
+const {Schema, model} = mongoose;
 
-const tableSchema = mongoose.Schema({
+const tableSchema = new Schema({
   tableNumber: Number,
   occupied: Boolean,
   occupiedBy: {
@@ -40,6 +41,5 @@ const tableSchema = mongoose.Schema({
   },
 });
 
-const Table = mongoose.model('Table', tableSchema);
-
-export default Table;
+const Table = model('Table', tableSchema);
+module.exports=Table;
