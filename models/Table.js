@@ -1,4 +1,5 @@
-// import { Schema, model } from "mongoose";
+//const mongoose=require("mongoose")
+//const {Schema,model} =mongoose
 
 // const tableSchema = new Schema({
 //   tableNumber: {
@@ -29,8 +30,8 @@
 
 // export default Table;
 
-const mongoose = require('mongoose');
-const {Schema, model} = mongoose;
+const mongoose=require("mongoose")
+const {Schema,model} =mongoose
 
 const tableSchema = new Schema({
   tableNumber: Number,
@@ -42,4 +43,5 @@ const tableSchema = new Schema({
 });
 
 const Table = model('Table', tableSchema);
+
 module.exports=Table;

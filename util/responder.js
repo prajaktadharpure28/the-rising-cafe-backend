@@ -6,4 +6,4 @@ const responder = (res, data, message, success = true) => {
   });
 };
 
-export default responder;
+module.exports=responder;
