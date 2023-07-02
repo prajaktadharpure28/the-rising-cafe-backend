@@ -5,7 +5,7 @@ const path = require("path")
 const bodyParser = require("body-parser")
 
 dotenv.config();
-mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', false)
 
 const User = require('./models/User.js');
 const FoodItem = require('./models/FoodItem.js');
