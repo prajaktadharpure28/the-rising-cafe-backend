@@ -1,5 +1,6 @@
-import responder from './../util/responder';
-
-export const getHealth = (req, res) => {
+const responder=require("./../util/responder")
+const getHealth = (req, res) => {
   responder(res, null, 'Email already exists', false);
 };
+
+module.exports=getHealth
