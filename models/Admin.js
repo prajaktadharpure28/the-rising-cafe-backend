@@ -1,5 +1,6 @@
-import {Schema, model} from 'mongoose';
 
+const mongoose=require("mongoose")
+const {Schema,model} =mongoose
 const AdminSchema = new Schema({
     name: {
         type: String,
@@ -42,4 +43,4 @@ const AdminSchema = new Schema({
 
 const Admin = model("Admin", AdminSchema)
 
-export default Admin;
+module.exports=Admin
